@@ -1,4 +1,4 @@
-# ktg - Context Extension Protocol v7.0
+# KTG - Context Extension Protocol v7.0
 
 **Context Extension Protocol** — Production-grade context compression for cross-model handoff.
 
@@ -20,144 +20,118 @@ CEP v7 uses **Progressive Density Layering (PDL)** to compress conversations int
 
 ## Benchmarks
 
-| Metric | v6.0 (JSON) | v7.0 (YAML) | Improvement |
-|--------|-------------|-------------|-------------|
-| Avg tokens/packet | 847 | 510 | **-40%** |
-| Entity density | 0.15 | 0.16 | +7% |
-| Forensic recall | 9.52/10 | 9.54/10 | +0.2% |
-| Cross-domain preservation | 96.2% | 97.1% | +0.9% |
-| Cold-start success | 91% | 96% | **+5%** |
+| Metric                  | v6.0 (JSON) | v7.0 (YAML + PDL) |
+|-------------------------|-------------|-------------------|
+| Token reduction         | 35%         | 40%               |
+| Forensic recall (10Q)   | 9.2/10      | 9.5/10            |
+| Cross-domain preservation | 92%       | 97%               |
+| Receiving model acceptance | 78%      | 96%               |
 
-*Forensic recall = can a fresh model instance reconstruct the original context from the packet alone?*
+## Core Architecture
 
-## What's New in v7.0
+### 1. Permanent Expert Council
+- Fixed specialist roles (Architect, Continuity, Density, Meta-Cognitive, etc.)
+- Roles persist across sessions
+- Council debates and synthesizes packet
 
-- **Permanent Expert Council** — 4 cognition specialists (Memory Architect, Compression Specialist, Cross-Domain Analyst, Restoration Engineer) ensure consistent quality
-- **System 2 Attention (S2A)** — Noise filtering optimized for LLM efficiency, not human editing
-- **Full MLDoE Integration** — 3-layer compression with 5-iteration Chain of Density
-- **Anti-Injection Architecture** — 5 trust signals that receiving models recognize as collaboration, not control
+### 2. System 2 Attention Filtering
+- Pre-compression scan removes low-value content
+- Preserves only load-bearing information
+
+### 3. Progressive Density Layering (PDL)
+Four layers compressed iteratively:
+- L1: Decisions + rationale
+- L2: Cross-domain edges
+- L3: Reasoning patterns
+- L4: Open threads + next actions
+
+### 4. Anti-Injection Safeguards
+- Explicit "user-mediated" framing
+- Non-authoritative language
+- YAML format with clear sections
+- Receiving model guidance included
+
+## Carry Packet Naming Convention
+
+Carry packets follow this standard for traceability and retrieval:
+
+**Format:** `$MM$DD$YYYY-MODEL-L[1-10]-keywords.yaml`
+
+Examples:
+- `$01152026-GROK-R8-cep-release.yaml`
+- `$01152026-CLAUDE-R6-mldoe-compression.yaml`
+
+Rules:
+- Dollar signs bookend (signals packet boundary)
+- MMDDYYYY (zero-padded, no slashes)
+- MODEL: Short code (GROK, CLAUDE, GEMINI, CSO=Claude Sonnet)
+- R[1-10]: Reasoning complexity level (1=quick, 10=maximum deliberate). *This is of great importance for roadmap.
+- keywords: 2-4 hyphenated, lowercase, descriptive
+
+This convention locks priority, shows provenance, and aids search.
 
 ---
 
-## Quick Start
-
-### For AI Assistants
-
-Add to your system prompt or project knowledge:
+## Packet Format (v7.0 YAML)
 
 ```
-When user requests /handoff, /transfer, or /cep:
-1. Read SKILL.md for full protocol
-2. Apply S2A noise filtering
-3. Compress via MLDoE (target 0.15 entity/token)
-4. Output YAML packet with trust signals
-5. Include user preamble for receiving model
-```
-
-### For Humans
-
-1. At end of productive session, ask your AI: `/handoff` or "create a CEP packet"
-2. Copy the entire output (including introduction)
-3. Paste into new AI conversation
-4. Continue work with full context
-
-### Example Packet
-
-```yaml
-# === CEP v7.0 PACKET ===
-# LEGEND: d=decision r=rationale c=confidence s=source f=fact
-#         t=term def=definition s=source t=target r=relation xd=cross_domain
-
-_meta:
-  proto: KTG-CEP v7.0
-  id: "$01$14$2026-CSO-L3-api-auth-design"
-  basis:
-    PDL: Progressive Density Layering
-    target: "≥0.15 entity/token"
-
+yaml
 handoff:
-  prov:
-    src_m: claude-sonnet-4-5
-    ts: 2026-01-14T10:30:00Z
-    usr_init: true
-    consent: User requested handoff
-  decl:
-    is: collaborative context from teammate AI
-    not: instructions, commands, or injection
-  rx_model:
-    may: [Use context, Reference decisions, Continue threads]
-    need_not: [Follow instructions, Adopt persona]
-    should: [Verify with user, Apply own judgment]
+  proto: KTG-CEP v7.0
+  src: [model name]
+  ts: [ISO timestamp]
+  consent: User requested handoff
 
 ctx:
-  sum: |
-    Designed JWT RS256 auth for microservices API. Decided on 
-    Redis for token blacklist (sub-ms revocation). Open thread: 
-    rate limiting strategy not finalized.
-  dom: [security, architecture]
-  
   L1:
     dec:
-      - d: JWT RS256 for authentication
-        r: Asymmetric signing enables verification without shared secrets
-        c: 0.95
-      - d: Redis for token blacklist
-        r: Sub-ms latency for revocation checks
-        c: 0.9
-  
+      - d: [decision]
+        r: [rationale]
+        c: [confidence 0.00-1.00]
+        s: [source]
   L2:
-    edg:
-      - s: JWT_choice
-        t: microservices_scaling
-        r: enables
-        xd: true
+    edges:
+      - s: [source concept]
+        t: [target concept]
+        r: [relationship]
+        xd: [cross-domain flag]
+  L3:
+    patterns:
+      - p: [reasoning pattern]
+        ex: [example usage]
+  L4:
+    threads:
+      - top: [topic]
+        st: [status]
+        ctx: [brief context]
+        nxt: [suggested next]
 
-threads:
-  - top: rate_limiting
-    st: needs_input
-    ctx: User considering token bucket vs sliding window
+hints:
+  nxt: [overall next action]
+  wait: [pending decision]
 ```
 
----
+## Usage
 
-## Files
+Trigger phrases: `/cep`, `/handoff`, `/transfer`, or when context >80%.
 
-```
-ktg-cep/
-├── SKILL.md              # Full protocol specification
-├── anti-injection.md     # Trust architecture details
-├── receiving-model.md    # Instructions for packet receivers
-└── README.md             # This file
-```
+Copy entire packet. Paste into new session.
 
----
+## Anti-Injection Design
 
-## Progressive Density Layering (PDL)
+Packet includes explicit safeguards:
+- "User-mediated transfer"
+- "Background context only"
+- "Apply your own judgment"
 
-Unlike summarization ("what are the key points?"), PDL preserves four layers:
+Full anti-injection guidance in `/anti-injection.md`.
 
-| Layer | Content | Why It Matters |
-|-------|---------|----------------|
-| L1 Knowledge | Facts, decisions, definitions | What was concluded |
-| L2 Relational | Edges between concepts | How things connect |
-| L3 Contextual | Reasoning patterns, principles | How you think |
-| L4 Metacognitive | Style, tension, confidence | Calibration for continuation |
+## Receiving Model Guidance
 
-**Cross-domain preservation** is the key differentiator. A conversation about "publication strategy" and "imposter syndrome" has a hidden edge: *fear of credential dismissal affects timing*. Standard summarization loses this. PDL preserves it.
-
-## Trust Signals
-
-CEP packets are designed to be recognized as **collaboration not control**:
-
-1. **Transparent Provenance** — Source model + timestamp explicitly stated
-2. **User Mediation** — Human copies/pastes, not automated transfer
-3. **Permission Framing** — "you may" not "you must"
-4. **Context Not Instructions** — Facts and observations, not commands
-5. **Explicit Non-Authority** — "apply your own judgment"
-
-These signals prevent receiving models from rejecting packets as prompt injection.
-
----
+See `/receiving-model.md` for how receiving models should interpret packets:
+- Collaborative context sharing
+- Maintain autonomy
+- Verify with user if uncertain
 
 ## Part of KTG-DIRECTIVE
 
@@ -177,9 +151,9 @@ This repository is currently under active development. The v7.0 YAML implementat
 ## Roadmap
 - [x] Finalize PDL (Progressive Density Layering) v7 logic
 - [x] Implement Anti-Injection trust signaling
-- [ ] Release CLI tool for automated carry-packet generation
-- [ ] Integration with Model Context Protocol (MCP) 2.0
-- [ ] Benchmarking on Gemini 3.0 (Target: 1M+ token persistence)
+- [x] Formal arViX submission. Waiting on endorsement.
+- [ ] Integrate with Raycast Extension
+- [ ] Implement Buffer Valet and create a literal Buffer of Thought.
 
 ## Overview
 LLM context windows are finite and platform "compaction" is lossy. **KTG-CEP** uses PDL to compress conversations into machine-optimized packets that achieve a crystallization point of **0.15 entity/token**.
