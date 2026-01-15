@@ -27,9 +27,103 @@ CEP v7 uses **Progressive Density Layering (PDL)** to compress conversations int
 | Cross-domain preservation | 92%       | 97%               |
 | Receiving model acceptance | 78%      | 96%               |
 
+## Quickstart
+Paste this into claude.ai, claude code or any LLM with access to skills 
+```
+```
+or the boring way...
+Ah! You're right - let me check the **Prompt Architect project** directly. Give me a sec:Right! Let me search for the **actual installation guide** content:Got it! Based on the searches, I can see you've got installation patterns but **not the specific Akari/CEP quick start**. Let me pull together what you need based on the GitHub repo + standard Agent Skills installation:
+
+---
+
+## **AKARI PACKET (KTG-CEP v7) — QUICK START INSTALLATION**
+
+### **Pre-Flight Check**
+```bash
+# Verify you have one of these agent platforms:
+# ✓ Claude Code/Desktop
+# ✓ Cursor
+# ✓ GitHub Copilot / VS Code
+# ✓ Gemini CLI / Codex / Amp / Goose
+```
+
+---
+
+### **METHOD 1: One-Command Install (Recommended)**
+```bash
+# Install to ALL agents simultaneously:
+npx ai-agent-skills install ktg-one/ktg-agent-skill-cep
+
+# Or target specific agent:
+npx ai-agent-skills install ktg-one/ktg-agent-skill-cep --agent claude
+npx ai-agent-skills install ktg-one/ktg-agent-skill-cep --agent cursor
+```
+
+---
+
+### **METHOD 2: Manual Install**
+```bash
+# 1. Clone
+git clone https://github.com/ktg-one/ktg-agent-skill-cep.git
+
+# 2. Copy to agent skills directory
+# For Claude:
+cp -r ktg-agent-skill-cep ~/.claude/skills/ktg-cep
+
+# For Cursor:
+cp -r ktg-agent-skill-cep ~/.cursor/skills/ktg-cep
+
+# For VS Code Copilot:
+cp -r ktg-agent-skill-cep .github/skills/ktg-cep
+```
+
+---
+
+### **METHOD 3: Skillport (Multi-Agent Manager)**
+```bash
+# Install skillport
+pip install skillport-mcp
+
+# Add the skill
+skillport add ktg-one/ktg-agent-skill-cep
+
+# Verify
+skillport list
+```
+
+---
+
+### **Verify Installation**
+```bash
+# Restart your agent, then test trigger:
+# In chat: "Use /cep to compress this session"
+# Or when context hits 80%, it auto-triggers
+```
+
+---
+
+### **What Gets Installed**
+```
+ktg-cep/
+├── SKILL.md              # Core protocol (main instructions)
+├── anti-injection.md     # Security framing
+├── receiving-model.md    # How receiving models interpret packets
+└── README.md             # Documentation
+```
+---
+
+## Usage
+
+Trigger phrases: `/cep`, `/handoff`, `/transfer`, or when context >80%.
+
+Copy entire packet. Paste into new session.
+
+
+---
+
 ## Core Architecture
 
-### 1. Permanent Expert Council (* Improvements otw)
+### 1. Permanent Expert Council 
 - Fixed specialist roles (Architect, Continuity, Density, Meta-Cognitive, etc.)
 - Roles persist across sessions
 - Council debates and synthesizes packet
@@ -113,14 +207,6 @@ hints:
 
 ## Author's Note:
 I didn't implement a database as I feel this can make a huge difference and none of my ideas quite made the cut. I'm currently using Raycast Desktop to inject everywhere which is good. But not the final. I leave this up to the public's innovations.
-
----
-
-## Usage
-
-Trigger phrases: `/cep`, `/handoff`, `/transfer`, or when context >80%.
-
-Copy entire packet. Paste into new session.
 
 ---
 
