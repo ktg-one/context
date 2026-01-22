@@ -1,4 +1,5 @@
-# Context Extension Protocol v8.0
+ # Context Extension Protocol v8.0
+ 450 more tokens. 3x the effectiveness
 ![CONTEXT](https://github.com/user-attachments/assets/3ca9f552-e4ca-4487-95f2-c979b9b51356)
 
 
@@ -280,7 +281,7 @@ This repository is currently under active development. The v8.0 YAML implementat
 - [x] Finalize PDL (Progressive Density Layering) v8 logic
 - [x] Implement Anti-Injection trust signaling
 - [x] Formal arViX submission. Waiting on endorsement.
-- [ ] Knowledge base for experts
+- [~] Knowledge base for experts
 - [ ] Next: Implement MAGMA-style dual-stream memory (Asynchronous Consolidation).
 - [ ] Integrate with Raycast Extension
 - [ ] Implement Buffer Valet and create a literal Buffer of Thought.
@@ -306,7 +307,8 @@ Please keep changes focused and well‑documented.
 ## Research Papers
 
 <i>Pending</i>
-
+https://github.com/ktg-one/context-extension-papers
+Endorsements Welcome~!
 ---
 
 ## License 
