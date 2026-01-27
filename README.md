@@ -1,4 +1,4 @@
-# STRAWHATS-CEP v9.1 快存
+# Quicksave (Ex-CEP v9.1) 快存
 
 **Context Extension Protocol** — Cross-model context handoff via Japanese semantic compression and negentropic coherence validation.
 
@@ -10,7 +10,7 @@
 
 **Claude Desktop / Claude Code:**
 ```bash
-npx ai-agent-skills install ktg-one/cep-agent-skill
+npx ai-agent-skills install ktg-one/quicksave
 ```
 
 **Everyone Else:**
@@ -23,7 +23,7 @@ Context windows are finite. Platform compaction is lossy. Cross-model handoffs l
 
 ## The Solution
 
-CEP v9.1 creates **carry-packets** using:
+Quicksave v9.1 creates **carry-packets** using:
 - **Progressive Density Layering (PDL)** — 4-layer information hierarchy
 - **Japanese Kanji Compression** — 40-55% token reduction
 - **Negentropic Coherence Lattice (NCL)** — Drift validation before handoff
@@ -39,14 +39,14 @@ CEP v9.1 creates **carry-packets** using:
 | Density | ~0.15 ent/tok (0.20+ with kanji) |
 | Forensic recall | 9.5/10 |
 | Cross-domain preservation | 97% |
-| Model acceptance | 97% |
+| Model acQuicksavetance | 97% |
 | Production testing | 19 months (ktg.one) |
 
 ## Usage
 
 | Trigger | Action |
 |---------|--------|
-| `/handoff` `/cep` `/packet` | Generate transfer packet |
+| `/handoff` `/Quicksave` `/packet` | Generate transfer packet |
 | `/quicksave` `/qs` | Generate validated packet |
 | Context ≥80% | Auto-prompts to save |
 | "continue later" | Offer quicksave |
@@ -64,11 +64,11 @@ CEP v9.1 creates **carry-packets** using:
 | Layer | Content | Keys |
 |-------|---------|------|
 | L1 知識層 | Facts, decisions, definitions | d/r/c/f/s |
-| L2 関係層 | Concept edges, domain bridges | 起/終/関/xd/w |
+| L2 関係層 | ConQuicksavet edges, domain bridges | 起/終/関/xd/w |
 | L3 文脈層 | Reasoning patterns, principles | — |
 | L4 超認知層 | Style, tension, user traits | — |
 
-**L2 is what summarization loses.** CEP preserves it.
+**L2 is what summarization loses.** Quicksave preserves it.
 
 ### Japanese Compression 漢字圧縮
 
@@ -124,7 +124,7 @@ AXIS/LYRA/RHO/NYX archetypal oversight for quality assurance.
 ## Files
 
 ```
-cep-agent-skill/
+Quicksave-agent-skill/
 ├── SKILL.md                    # Core protocol
 └── references/
     ├── PDL.md                  # Progressive Density Layering
@@ -148,11 +148,11 @@ Claude ✓ | GPT-4/4o ✓ | Gemini ✓ | Qwen ✓ | DeepSeek ✓
 
 ## Part of STRAWHATS Framework
 
-CEP is the context preservation component of **STRAWHATS** (Strategic Triumvirate Router Architecture With Hybrid Agentic Task Systems).
+Quicksave is the context preservation component of **STRAWHATS** (Strategic Triumvirate Router Architecture With Hybrid Agentic Task Systems).
 
 ## Contributors
 
-**Kevin Tan** (ktg.one) — CEP protocol, PDL, S2A, MLDoE, Japanese compression, 19-month production validation
+**Kevin Tan** (ktg.one) — Quicksave protocol, PDL, S2A, MLDoE, Japanese compression, 19-month production validation
 
 **David Tubbs** (Axis_42) — Negentropic Coherence Lattice, Four Roles governance, ~30% robustness enhancement
 
