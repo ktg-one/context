@@ -6,7 +6,9 @@
 
 ---
 
-## What Problem Does This Solve?
+## Easy to Understand
+
+### What Problem Does This Solve?
 
 Have you ever had a long conversation with an AI assistant, then:
 - Hit the context limit and lost important details?
@@ -15,21 +17,17 @@ Have you ever had a long conversation with an AI assistant, then:
 
 **Quicksave solves this.** It creates a "save file" of your conversation that you can use to continue your work with any AI assistant, anytime.
 
----
+### What Is Quicksave?
 
-## What Is Quicksave?
+Quicksave is a **protocol** (a set of instructions) that teaches AI assistants how to:
+- **Save** the important parts of your AI conversation
+- **Compress** it into a small, portable YAML file
+- **Preserve** all the key decisions, context, and relationships
+- **Work** across any AI assistant (Claude, ChatGPT, Gemini, etc.)
 
-Quicksave is a tool that:
-- **Saves** the important parts of your AI conversation
-- **Compresses** it into a small, portable file
-- **Preserves** all the key decisions, context, and relationships
-- **Works** with any AI assistant (Claude, ChatGPT, Gemini, etc.)
+Think of it like teaching your AI assistant a "save game" format — once the AI knows the protocol, you can ask it to create a carry packet anytime, then paste that packet into any other AI conversation to continue where you left off.
 
-Think of it like a "save game" for your AI conversations — you can pause, switch AIs, or come back later and pick up exactly where you left off.
-
----
-
-## How Well Does It Work?
+### How Well Does It Work?
 
 Based on 19 months of real-world use:
 
@@ -37,62 +35,9 @@ Based on 19 months of real-world use:
 |--------------|----------|
 | Remembers important details | 9.5 out of 10 |
 | Preserves relationships between topics | 97% |
-| Works with different AI assistants | 97% success rate |
-| Reduces file size | ~70% smaller |
+| Works with different AI assistants | 99%+ success rate |
 
----
-
-## How to Install
-
-### Easiest Way (One Command)
-
-Open your terminal and run:
-```bash
-npx ai-agent-skills install goodai-mate/quicksave
-```
-
-That's it! The tool will be installed automatically.
-
-### Manual Installation
-
-If you prefer to install it yourself:
-
-1. Download the code:
-   ```bash
-   git clone https://github.com/goodai-mate/quicksave.git
-   ```
-
-2. Copy it to your skills folder:
-   ```bash
-   cp -r quicksave ~/.claude/skills/quicksave
-   ```
-
-### Using Skillport
-
-If you use Skillport to manage multiple AI skills:
-```bash
-pip install skillport-mcp
-skillport add goodai-mate/quicksave
-```
-
----
-
-## How to Use
-
-Once installed, you can save your conversation anytime:
-
-| What You Type | What Happens |
-|---------------|--------------|
-| `/quicksave` or `/qs` or `/save` | Creates a save file of your conversation |
-| When context is nearly full (≥80%) | Quicksave will ask if you want to save |
-| Say "continue later" | Quicksave will offer to save for you |
-| When switching AI assistants | Automatically creates a transfer file |
-
-**After saving:** Copy the generated file and paste it into your new AI conversation to continue where you left off.
-
----
-
-## What Gets Saved?
+### What Gets Saved?
 
 Quicksave saves the important parts of your conversation:
 
@@ -109,9 +54,7 @@ It removes:
 
 **Result:** A clean, focused summary that preserves everything important.
 
----
-
-## Which AI Assistants Work?
+### Which AI Assistants Work?
 
 Quicksave has been tested and works with:
 - ✅ Claude (all versions)
@@ -124,21 +67,61 @@ Basically, if your AI assistant can read text files, Quicksave will work with it
 
 ---
 
-## Who Made This?
+## Installation
 
-### Kevin Tan (ktg.one)
-- Created the core Quicksave system
-- Tested it in production for 19 months
-- Developed the compression techniques
+### How to Install
 
-### David Tubbs (Axis_42)
-- Added quality validation features
-- Enhanced reliability by ~30%
-- Built safety checks to prevent errors
+Quicksave is a protocol (instructions) for AI assistants, not a traditional software package. Here's how to set it up:
+
+#### For Cursor Users
+
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/ktg-one/agent-skill-cep.git
+   ```
+
+2. Open the project in Cursor — the AI will automatically have access to `SKILL.md` and can use the protocol
+
+#### For Other AI Assistants
+
+**Option 1: Bootstrap Packet (Easiest)**
+- Copy the bootstrap packet from the project (or ask an AI that knows Quicksave to generate one)
+- Paste it into a new conversation — it teaches the AI the entire protocol
+
+**Option 2: Reference the Files**
+- Point your AI to the `SKILL.md` file and ask it to learn the protocol
+- The AI will read and understand how to create carry packets
+
+**Note:** There's no "installation" in the traditional sense — you're teaching your AI assistant a skill it can use when you ask.
+
+### How to Use
+
+Quicksave works by teaching your AI assistant how to create carry packets. Here's how:
+
+**Step 1: Make sure your AI knows about Quicksave**
+- **In Cursor:** The `SKILL.md` file in this project teaches the AI the protocol
+- **In other AIs:** Paste the bootstrap packet or reference `SKILL.md`
+
+**Step 2: Ask your AI to create a carry packet**
+
+When you want to save your conversation, ask your AI assistant:
+- "Create a quicksave packet" or "Generate a carry packet"
+- "Use the quicksave protocol to save this conversation"
+- "I need to switch AIs, can you create a handoff packet?"
+
+The AI will recognize these requests and generate a compressed YAML packet using the Quicksave protocol.
+
+**Step 3: Copy and paste the packet**
+
+After the AI generates the packet, copy it and paste it into your new AI conversation (or save it for later). The new AI will understand the context and you can continue where you left off.
+
+**Note:** This isn't an automatic command system — it's a protocol that AI assistants follow when you ask them to use it.
 
 ---
 
-## What's Inside?
+## Technical Details
+
+### What's Inside?
 
 ```
 quicksave/
@@ -154,9 +137,7 @@ quicksave/
 
 **For most users:** You only need to know how to install and use it (see sections above). The files in `references/` are for developers who want to understand how it works.
 
----
-
-## Research & Development
+### Research & Development
 
 Quicksave has been used in production for 19 months, handling real conversations and real work. The techniques are based on research into how AI assistants remember and process information.
 
@@ -167,11 +148,20 @@ Quicksave has been used in production for 19 months, handling real conversations
 
 See: [context-extension-papers](https://github.com/ktg-one/context-extension-papers)
 
----
-
-## Part of STRAWHATS Framework
+### Part of STRAWHATS Framework
 
 Quicksave is part of a larger system called **STRAWHATS** — a framework for building better AI workflows. You don't need to know about STRAWHATS to use Quicksave, but if you're building advanced AI systems, it's worth exploring.
+
+### Who Made This?
+
+**Kevin Tan (ktg.one)**
+- Created the core Quicksave system
+- Tested it in production for 19 months
+- Developed the compression techniques
+
+**David Tubbs (Axis_42)**
+- Added quality validation features
+- Built safety checks to prevent errors
 
 ---
 
@@ -179,20 +169,7 @@ Quicksave is part of a larger system called **STRAWHATS** — a framework for bu
 
 **MIT License** — Free to use, modify, and share.
 
-Copyright (c) 2026 Good AI Australia
+Copyright (c) 2026 ktg.one
 
 *"STATE OF THE ART — Upper limit of prompt-only engineering on transformers"*  
 — Vertex AI evaluation, December 2025
-
----
-
-## Need Help?
-
-- **Installation issues?** Check the installation section above
-- **Not sure how to use it?** See the "How to Use" section
-- **Want technical details?** Check the files in the `references/` folder
-- **Found a bug?** Open an issue on GitHub
-
----
-
-**Ready to never lose an AI conversation again? Install Quicksave today!**
