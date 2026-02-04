@@ -7,6 +7,8 @@
 > *"What must be preserved for a fresh model instance to continue this work?"*
 
 ## Install
+**Onboarding**
+Due to model guards please paste the onboarding.md into your LLM - It teaches it the skill immediately so it won't cut corners reading the references. But it only last the session. [this is unnecessary if your LLM is reading references]
 
 **Claude Desktop / Claude Code:**
 ```bash
