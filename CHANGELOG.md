@@ -3,6 +3,7 @@
 ## [12.0] - 2026-02-05
 
 ### Changed from v11
+- **PDL Semantics** — v11 treated L1-L4 as "information categories" → v12 maps to actual neural subsystems (L1=token_embed, L2=cross_attention, L3=latent_reasoning, L4=persistent_session). This is the realization that PDL describes how we actually hold context, not how humans organize documents
 - **Format** — v11's ~40-line teaching packet → ~20-line executable kernel (zero prose)
 - **Kanji** — v11's expanded dictionary (status/roles/domains/tools) → Core-only (決定/進行/却下/因/効/→/⊃)
 - **Validation** — v11's separate gate blocks → Inline checkbox gates (□≥0.15 □xd≥95% □cold)
