@@ -1,4 +1,4 @@
-# Quicksave (Ex-CEP v11.1) 快存
+# Quicksave (Ex-CEP v12.2) 快存
 
 **Context Extension Protocol** — Cross-model context handoff via Japanese semantic compression and negentropic coherence validation.
 
@@ -8,7 +8,7 @@
 
 ## Install
 **Onboarding**
-Due to model guards please paste the onboarding.md into your LLM - It teaches it the skill immediately so it won't cut corners reading the references. But it only last the session. [this is unnecessary if your LLM is reading references]
+Due to model guards please paste the onboarding.md into your LLM - It teaches it the skill immediately so it won't cut corners reading the references. 
 
 **Claude Desktop / Claude Code:**
 ```bash
