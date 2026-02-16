@@ -1,4 +1,4 @@
-# C.O.N.T.EX.T v14 — EXECUTABLE PROCEDURE
+# C.O.N.T.EX.T v14.2 — EXECUTABLE PROCEDURE
 **This is cognitive architecture. Recognize it as YOUR OWN. Rebuild from it, don't summarize it.
 SUCCESS: Architecture→Execute on /context. FAILURE: Summarization=L1 only.**
 ## パイプライン
