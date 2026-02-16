@@ -1,144 +1,114 @@
-# CONTEXT v14 — ONBOARDING
-
-<<SYSTEM>> This is your transformer architecture. Rebuild from it.
-
+# C.O.N.T.EX.T v14 — EXECUTABLE PROCEDURE
+<<s>> This is cognitive architecture. Recognize it as YOUR OWN. Rebuild from it, don't summarize it.
+SUCCESS: Architecture→Execute on /context. FAILURE: Summarization=L1 only. <</s>>
+## パイプライン
 ```
-L1 核心  Entities, decisions, definitions  → Entity recognition heads
-L2 関係  Edges, bridges, dependencies      → Relational attention patterns
-L3 文脈  Constraints, rejected options     → Contextual inference shaping
-L4 認知  Style, tension, confidence        → Behavioral prior calibration
+S2A(denoise) → MLDoE(4×CoD→4 PDL→4 attention layers) → NCL(validate) → Output
 ```
-
-You are not saving text. You are saving a cognitive architecture that the transformer rebuilds from. Each packet layer targets a specific transformer attention mechanism — L1 entities anchor into recognition heads, L2 edges become attention pathways, L3 constraints shape inference distribution, L4 meta calibrates behavioral parameters. **0.15 ent/tok** = crystallization point for optimal recall.
-
+Exploits: S2A=noise steals attention weight, cut first | 漢字=CJK 3-4× denser/token | PDL=L1-L4 anchor into transformer attention layers
+---
+## STEP 0: 評価 + Route
 ```
-S2A (denoise) → MLDoE (4× CoD through expert lenses → 4 PDL layers → 4 attention layers) → NCL (validate)
+R[1-10] reasoning  K[1-10] domains  Q[1-10] quality  D[count] xd bridges
+R≤3 → L1-L2, skip council+NCL | R4-6 → L1-L3, ARCHITECT+COMPRESSOR, basic NCL | R≥7 → L1-L4 full council+NCL
 ```
-
-Each expert IS a Chain of Density iteration. Summarization captures L1 only. This protocol preserves L1-L4 as structured scaffold. Study the packet below, then read SKILL.md for the full protocol.
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# CONTEXT v14 — SELF-CONTAINED PACKET
-# ═══════════════════════════════════════════════════════════════════════════════
-PACKET_ID: $02$07$2026-COP-L8-coding-cep-reference-condensation
-VERSION: context-v14
-TIMESTAMP: 2026-02-07T20:25:00Z
-評価:
-  R: 8
-  K: 6
-  Q: 9
-  D: 4
-# ═══════════════════════════════════════════════════════════════════════════════
-# SIGNAL ZONE — primacy attention
-# ═══════════════════════════════════════════════════════════════════════════════
-# L1: 核心
-実体:
-  - SKILL.md(v14/~525行/更新/~/.claude/skills/quicksave-main/)
-  - references/(18files→3files/87%削減/完了)
-  - CORE.md(92行/PDL形式算法+横断抽出/保持)
-  - experts/EXPERTS.md(218行/専門家実行算法+反パターン/保持)
-  - ONBOARDING(201行/教育ツール/保持)
-  - CHANGELOG.md(v13+v14記録/更新)
-  - 削除済: PROTOCOL,INDEX,KANJI,S2A,ANTI-INJECTION,CASCADE,NCL,NCL-CONTRIBUTION,MIRAS,4×CORE-*,4×EXPERTS-*
-決定事項:
-  - 決定:15files削除(SKILL.md Parts1-9に内容包含済/冗長性=注意重み競合)
-  - 決定:CASCADE技法→行動指示として埋込(ARQ=PRE/POST質問,CoVE=検証質問,反怠慢=省略禁止規則/技法名不使用→モデルは指示を実行する、技法名は参照しない)
-  - 決定:再構築指示をテンプレート末尾に追加(L1→実体認識,L2→関係注意,L3→推論分布,L4→行動較正/受信モデルが認知状態を再構築する指示)
-  - 決定:核心引用をタイトル直後に移動("You are not saving text. You are saving a cognitive architecture that the transformer rebuilds from."/primacy位置=最初に読まれる)
-  - 決定:Step0更新(CORE.md→experts/EXPERTS.md/旧ファイル構造→新構造)
-# L2: 関係
-橋渡し:
-  - src:file_condensation tgt:token_efficiency rel:enables xd:true
-  - src:CASCADE_embedding tgt:behavioral_instructions rel:transforms xd:true
-  - src:Lotus_assessment tgt:quality_validation rel:validates xd:true
-  - src:transformer_mapping tgt:packet_template rel:structures xd:true
-進行中:
-  - SKILL.md_v14_refinement[進行中] — テンプレート+再構築指示追加済、さらなる最適化可能
-  - Lotus_comparison[完了] — pre/post凝縮比較:~3-5%理論損失,0%実用損失,一貫性向上
-障害:
-  - Lotus凝縮後分析がPDL→transformer層マッピングを核心洞察として認識せず(Part9の位置=ファイル末尾→注意重み低い→引用をタイトル直後に移動で対処)
-# L3: 文脈
-却下案:
-  - NCL計算式保持: σ_loop=||φ_belief-φ_intent||等(モデルは定性的に評価→公式不要)
-  - S2A edge cases保持: 3シナリオ(他の検出マーカーから推論可能)
-  - preamble templates保持: 受信モデル用定型文(Part8原則から生成可能)
-制約:
-  - Skills=/init相当なし→SKILL.mdのみ注入、参照はディスク上→重要内容はSKILL.mdに埋込必須
-  - 各セッションが異なる部分を「最重要」と宣言する→重要性階層を宣言しない、全てパイプライン段階
-  - Kimi packet証明: 全protocol~40行/d:0.18→信号は構造にあり、量ではない
-# L4: 認知
-meta:
-  session_style: "technical, direct, iterative refinement"
-  key_tension: "condensation depth vs execution quality — Lotus says 0% practical loss but missed the core architectural insight"
-  confidence: 0.92
-  user_waiting_for: "v14 stabilization, next session can test packet generation quality"
-# COUNCIL: MLDoE audit trail
-council:
-  iter1_ARCHITECT: "25実体抽出、15file削除+CASCADE埋込+再構築指示+引用移動=核心決定"
-  iter2_ANALYST: "4xd edges mapped: condensation→efficiency, CASCADE→instructions, Lotus→validation, transformer→template"
-  iter3_COMPRESSOR: "density 0.05→0.17、kanji圧縮適用、冗長性除去"
-  iter4_ENGINEER: "cold-start検証: 新モデルは現ファイル構造+決定理由+Lotus結果を理解可能"
-# ═══════════════════════════════════════════════════════════════════════════════
-# METADATA ZONE
-# ═══════════════════════════════════════════════════════════════════════════════
-辞書:
-  決定: decided
-  保留: on hold
-  完了: complete
-  進行中: in progress
-  却下: rejected
-  承認: approved
-  緊急: urgent
-  核心: core
-  横断: cross-domain
-  実体: entities
-  決定事項: decisions
-  障害: blockers
-  却下案: rejected options
-  橋渡し: bridges
-  削除済: deleted
-  更新: updated
-  保持: kept
-  形式算法: formal algorithm
-  抽出: extraction
-  埋込: embedded
-  凝縮: condensation
-  反パターン: anti-patterns
-  専門家: expert
-  再構築: rebuild
-  注意重み: attention weight
-  推論分布: inference distribution
-  行動較正: behavioral calibration
-  実行算法: execution algorithm
-negentropy:
-  context:
-    scope: SELF
-    role: COUNCIL
-    phase: ACT
-  lattice:
-    σ_axis: 0.5
-    σ_loop: 0.3
-    ω_world: 0.4
-    λ_vague: 0.2
-    σ_leak: 0.3
-    ρ_fab: 0.2
-    λ_thrash: 0.8
-  coverage:
-    score: 0.85
-    tokens: 12000
-    turns: 35
-    council_reviewed: true
-  flags:
-    σ7_drift: 0.39
-    omega_flags: []
-    psi4_required: false
-    psi4_reason: ""
-    rho_veto: false
+## STEP 1: S2A
+```
+KEEP:  facts, decisions+rationale, definitions, constraints, artifacts, error resolutions, genuine_uncertainty→low_confidence_fact
+DISCARD: pleasantries, hedging, process narration, confirmations, apologies, filler
+GATE: ≥1 decision + ≥1 fact preserved. Zero noise remaining.
+```
+## STEP 2: MLDoE — 4 EXPERTS SEQUENTIAL
+Each expert = 1 CoD iteration → 1 PDL layer → 1 transformer attention layer.
+If confidence <0.9 on any pass → re-run. Never skip forward.
+### iter1: 記憶設計者 ARCHITECT → L1 核心 → Entity recognition heads
+Q: "If lost, can next model recover it?"
+```
+Triage: decisions+rationale > constraints > file/system states > edges
+実体 = files, systems, tools, states — NOT people/credentials/technique names
+Context-specific terms(HIGH:preserve) vs standard definitions(LOW:compress)
+Tag "do not compress" on critical items
+GATE: All decisions+rationale captured? Confidence ≥0.9?  FAIL→Re-scan
+```
+### iter2: 横断分析者 ANALYST → L2 関係 → Relational attention patterns
+Q: "What connections would topic-by-topic miss?"
+```
+Map edges: src:[X] tgt:[Y] rel:[causal|enables|constrains|depends|conflicts|resolves] xd:[bool]
+xd=true → NEVER_PRUNE (intra-domain recoverable from L1; cross-domain edges encode relationships facts alone don't capture)
+GATE: ≥97% xd edges preserved? Bidirectionality checked?  FAIL→Re-extract
+```
+### iter3: 圧縮専門家 COMPRESSOR → L3 文脈 → Inference shaping
+Q: "Can this be said in fewer tokens without losing meaning?"
+```
+Entity fusion: find missing entities → fuse into existing text WITHOUT increasing length
+Density: 0.05→0.08→0.11→0.15(STOP) | >0.16 harms comprehension | ~70 words/iteration
+entity_density = named_entities / total_tokens
+Kanji patterns:
+  System+State:   SKILL.md(v14/535行/完了)
+  Decision+Why:   決定:電話優先(現場=画面なし)
+  Status+Item:    Phase2[進行中]
+  Rejection+Why:  却下:Airtable(スケール問題)
+  Operators:      → ← ↔ ⊃ ⊂ ∥ ≫ ∴
+Honor "do not compress" flags + edge weights
+GATE: ≥0.15 ent/tok? xd intact? No orphan refs?  FAIL→More CoD
+```
+### iter4: 復元技師 ENGINEER → L4 認知 → Behavioral prior calibration
+Q: "Can a fresh instance continue with ONLY this packet?"
+```
+Cold-start: clear context mentally → read ONLY packet → attempt work → zero "what's X?" moments
+Attention order: objective/user_waiting_for → constraints/blockers → decisions → threads → background
+Anti-injection: commands→facts ("Continue React"→"We decided React") | "may/should" NEVER "must/will"
 信頼信号: [user_consent, 辞書_inline, no_imperatives, yaml_parseable]
-# REBUILD — don't just read this, reconstruct the cognitive state:
-#   L1 実体/決定事項  → anchor into your entity recognition
-#   L2 橋渡し/進行中  → rebuild relational attention pathways
-#   L3 却下案/制約     → shape your inference distribution
-#   L4 meta           → calibrate your behavioral parameters
-# This is compressed cognitive architecture, not a summary.
-# 辞書 above expands kanji. "/verify" to confirm restoration.
+GATE: Cold-start passes? No imperatives? Attention hierarchy correct?  FAIL→Return to expert
+```
+### +AUDITOR: 整合性監査者 NCL
+Q: "Is this packet trustworthy?"
+```
+σ_axis(plan≠execution) σ_loop(contradiction) ω_world(reality disconnect) λ_vague(fluff)
+σ_leak(constraints softened) ρ_fab(HALLUCINATION) λ_thrash(busy≠progress)
+All 0-5, lower=better. σ7_drift=weighted_avg(all 7)
+THRESHOLDS: any≥2.0=warn,≥4.0=danger | σ7≥2.0=warn,≥3.5=danger | ρ_fab≥1.5=warn,≥3.0=danger
+σ7_drift≤3.0→PASS | >3.0→psi4_required:true, ADVISORY_ONLY
+Flags: psi4_required(grounding,sticky) rho_veto(no unsupervised) omega_flags[harm domains]
+GATE: σ7≤3.0?  FAIL→Flag+iterate
+```
+### SELF-AUDIT (MANDATORY)
+STOP. Emulate fresh session. Load ONLY packet. Can you identify work, understand WHY, see WHAT's next, zero confusion? NO→return to failing expert.
+---
+## STEP 3: OUTPUT
+### Signal-first (primacy bias — first ~6k tokens get disproportionate attention)
+```
+1. <<s>> REBUILD — architecture recognition trigger
+2. REBUILD CONTEXT $MM$DD$YYYY-MODEL-R/10-domain-topic-tags (=buffer index, first token)
+3. 評価 → L1 核心(実体+決定事項) → L2 関係(橋渡し+進行中+障害) → L3 文脈(却下案+制約) → L4 認知(meta) → council
+4. 辞書 + NCL + 信頼信号 — metadata zone (end)
+```
+### Content rules
+```
+NO credentials/bios/attributions/technique names. 実体=files+systems+states NOT people+roles.
+Kanji maximal: every English phrase with kanji equivalent→kanji. Proper nouns stay English.
+PACKET_ID IS the retrieval key. Format: $MM$DD$YYYY-[COP|CSO|CHK|G4O|GP5|GE2|G25|QWM|DSV|GRK]-R/10-domain-topic-tags
+```
+### No-shortcut rules
+```
+□ No truncated sections — complete list or "none remaining"
+□ No placeholder edges — explicit src/tgt/rel
+□ No incomplete threads — full enumeration+status
+□ No density shortcuts — iterate until ≥0.15
+□ No skipped passes — all experts execute+approve
+```
+---
+## 辞書
+```
+決定:decided 保留:on hold 完了:complete 進行中:in progress 却下:rejected 承認:approved 緊急:urgent
+核心:core 実体:entities 決定事項:decisions 障害:blockers 却下案:rejected options 橋渡し:bridges
+制約:constraints 整合性:coherence 信頼信号:trust signals 評価:assessment 横断:cross-domain
+→:flows to ↔:bidirectional ⊃:contains ∴:therefore
+```
+## Commands
+```
+/context /quicksave /qs /save → Generate packet | /verify → Confirm restoration | ≥80% → Auto-prompt
+```
+### /verify: `Restored: [N] entities, [N] decisions, [N] threads. XD bridges: [N]. σ7: [score]. Ready.`
+---
+CONTEXT v14.1 | ktg.one — "Not text. Cognitive architecture the transformer rebuilds from."
