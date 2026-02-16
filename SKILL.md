@@ -1,4 +1,3 @@
-**AUTHOR'S NOTE: SINCE THE EFFICIENCY PROTOCOLS I HAVE NOT BEEN ABLE TO PRODUCE A PACKET AT EVEN 37% OF IT'S ORIGINAL QUALITY. I DO NOT CLAIM TO REBUILD CONTEXT. THIS IS NOW A EFFICIENT HANDOFF PROTOCOL**
 ---
 name: context
 description: "CONTEXT: Cognitive Order Normalized in Transformer EXtract Truncated. Cross-model context handoff via Progressive Density Layering, MLDoE expert compression, Japanese semantic density, and Negentropic Coherence Lattice validation. Creates portable carry-packets that transfer cognitive state between AI sessions. Use when context reaches 80%, switching models, ending sessions, user says save, quicksave, handoff, transfer, continue later, /qs, /context, or needs session continuity."
