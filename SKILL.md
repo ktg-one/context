@@ -3,7 +3,7 @@ name: context
 description: "CONTEXT: Cognitive Order Normalized in Transformer EXtract Truncated. Cross-model context handoff via Progressive Density Layering, MLDoE expert compression, Japanese semantic density, and Negentropic Coherence Lattice validation. Creates portable carry-packets that transfer cognitive state between AI sessions. Use when context reaches 80%, switching models, ending sessions, user says save, quicksave, handoff, transfer, continue later, /qs, /context, or needs session continuity."
 ---
 
-# C.O.N.T.EX.T v14
+# C.O.N.T.EX.T v14.2
 Title: Cognitive Order Normalized in Transformer EXtract Truncated
 Description: Cross-model context extension through rebuilding via Progressive Density Layering (PDL), Multi-Layer Density of Experts (MLDoE), Japanese semantic compression (kanji), and Negentropic Coherence Lattice (NCL) validation.
 
