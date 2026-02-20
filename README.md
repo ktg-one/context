@@ -1,4 +1,4 @@
-# Cognitive Order Normalized in Transformer EXtract Truncate (CONTEXT v14)
+# Cognitive Order Normalized in Transformer EXtract Truncate (CONTEXT v14.3)
 
 <img width="2752" height="1536" alt="unnamed (2)" src="https://github.com/user-attachments/assets/5006ace7-2017-4e68-a1a8-33f5f7797b26" />
 
@@ -130,7 +130,7 @@ CONTEXT_PACKET_DIR = ~/.context-packets/
 CONTEXT_PACKET_DIR = {{YOUR_PACKET_FOLDER}}
 
 On /save, /context, /quicksave, /qs, or user requests context save:
-1. Generate a CONTEXT v14.2 packet (L1-L4 YAML format)
+1. Generate a CONTEXT v14.3 packet (L1-L4 YAML format)
 2. Save to CONTEXT_PACKET_DIR if you have file access, otherwise output as code block
 3. Filename = PACKET_ID.md
 
@@ -241,9 +241,9 @@ context/
 
 Claude | GPT-4/4o/GPT-5 | Gemini 2/2.5 | Qwen | DeepSeek | Kimi | Grok
 
-## Part of STRAWHATS Framework
+## Part of LEGIO Framework
 
-C.O.N.T.EX.T is the `memory` preservation component of **STRAWHATS** (Strategic Triumvirate Router Architecture With Hybrid Agentic Task Systems).
+C.O.N.T.EX.T is the `memory` preservation component of **LEGIO** (Legion-Engineered Governance for Intelligent Operations)
 
 ## Contributors
 
