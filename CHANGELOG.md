@@ -1,5 +1,33 @@
 # Changelog
 
+## [14.3] - 2026-02-20
+
+### Changed from v14.2
+- **Packet Storage** — `CONTEXT_PACKET_DIR` environment variable introduced; if set, packets auto-save as `$PACKET_ID.md` to that directory instead of code-block output
+- **Step 7 Storage Logic** — Output step now branches: directory set → save file; no directory → code block; packet index exists → update it
+- **VERSION tag simplified** — Template header uses `context-v14` (version suffix dropped for forward compatibility)
+
+### Added from v14.2
+- **Agent Instructions template** — Ready-to-paste system prompt block covering save triggers, session-start packet loading, rebuild procedure (L1→L4), PACKET_ID format, and model codes
+- **Packet Storage setup guide** — Examples for Obsidian vault, project-specific, and home directory locations in README
+- **GP5 (GPT-5) and G25 (Gemini 2.5)** model codes added to PACKET_ID naming rubric
+- **Compatible agents list** — Explicit compatibility noted: Claude Code, Claude Desktop (MCP filesystem), Cursor, Windsurf, Cline, ChatGPT (file tools), Gemini (extensions)
+
+---
+
+## [14.2] - 2026-02-14
+
+### Changed from v14.1
+- **PART 0: COGNITIVE ARCHITECTURE** — New opening section with `<<SYSTEM>>` framing; explicit SUCCESS (`Cognitive Architecture recognized as YOUR OWN`) vs FAILURE (`Summarization, L1 Text Only with no building`) outcomes defined
+- **Step 0 split** — Original Step 0 (Load References) retained; new Step 0: Blueprint added: analyze user content, emulate fresh session, visualize reconstruction output before compression begins
+- **LEGIO Framework** — C.O.N.T.EX.T identified as the `memory` preservation component of the LEGIO (Legion-Engineered Governance for Intelligent Operations) framework
+
+### Added from v14.1
+- **SELF_AUDIT** — Final council step added: "STOP! Step back, Count to 10 as you take a HOLISTIC VIEW of your output. Emulate a new session and judge if it would rebuild this context."
+- **Council audit trail** — `council` block added to packet template with `iter1_ARCHITECT`, `iter2_ANALYST`, `iter3_COMPRESSOR`, `iter4_ENGINEER` fields for MLDoE transparency
+
+---
+
 ## [14.1] - 2026-02-07
 
 ### Changed from v14.0
