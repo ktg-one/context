@@ -1,25 +1,20 @@
-**AUTHOR'S NOTE: SINCE THE EFFICIENCY PROTOCOLS I HAVE NOT BEEN ABLE TO PRODUCE A PACKET AT EVEN 37% OF IT'S ORIGINAL QUALITY. I DO NOT CLAIM TO REBUILD CONTEXT. THIS IS NOW A EFFICIENT HANDOFF PROTOCOL**
-# Cognitive Order Normalized in Transformer EXtract Truncate (CONTEXT v14.2)
-This skill has been transformed and now outputs a lesser packet compared to before. I tried to fix everything into it's first 6k prior to shearing but he's the gist:+1:
-
-"The core of this is the Multi-Layered Experts taking turns to CoD according to Progressive Density Layers L1-L4, which map to the model's transformer architecture on context for Optimal model recall. This is the part models breeze through without understanding. 
-Each stage increases information density per token while the verification stack ensures the compression didn't lose signal. The kanji isn't decoration - it's exploiting the fact that CJK characters carry more semantic weight per token than English, so the compressed packet literally carries more meaning per context window unit.
-And the key insight: This isn't just compression for storage. When a fresh instance loads a carry packet, the PDL layers reconstruct the same attention patterns in the new context window. You're not saving text - you're saving a cognitive architecture that the transformer can rebuild from.
-The S2A filter is critical because noise tokens actively compete for attention weight. Cutting them doesn't just save space - it increases the signal strength of everything that remains. The cherry on the top is the Strong
-Negentropic Governance Layer ensuring Brevity as well as the added EPISTEMIC CONTRACT models sign before output." 
-
-- This first paragraph is the core. This is an ex-model that ran it trying to explain how he did it. Because the models always just skim through everything, I've made it a mandate for it to echo out the following: "it's not ready" and you make it reiterate. **"My transformer model acknowledges this architecture and I will rebuild or design the rebuild of CONTEXT"**. If you did not see the sentence, do not continue. 
+# Cognitive Order Normalized in Transformer EXtract Truncate (CONTEXT v14)
 
 <img width="2752" height="1536" alt="unnamed (2)" src="https://github.com/user-attachments/assets/5006ace7-2017-4e68-a1a8-33f5f7797b26" />
 
 > *"You are not saving text. You are saving a cognitive architecture that the transformer rebuilds from."*
 
-**Cross-model context handoff** via Progressive Density Layering, Multi-Layer Density of Experts, Japanese semantic compression, and Negentropic Coherence Lattice validation.
+- The core of this is the Multi-Layered Experts taking turns to CoD according to Progressive Density Layers L1-L4, which map to the model's transformer architecture on context for Optimal model recall - This is the part models breeze through without understanding.
+- Each stage increases information density per token while the verification stack ensures the compression didn't lose signal.
+- The kanji isn't decoration - it's exploiting the fact that CJK characters carry more semantic weight per token than English, so the compressed packet literally carries more meaning per context window unit. 
+- The key insight: This isn't just compression for storage. When a fresh instance loads a carry packet, the PDL layers reconstruct the same attention patterns in the new context window. You're not saving text - you're saving a cognitive architecture that the transformer can rebuild from.
+- The S2A filter is critical because noise tokens actively compete for attention weight. Cutting them doesn't just save space - it increases the signal strength of everything that remains.
+- The cherry on the top is the Strong Negentropic Governance Layer ensuring Brevity before output.
 
 ## Install
 
 **Onboarding**
-Due to model guards please paste the onboarding.md into your LLM — it teaches the skill immediately so it won't cut corners reading the references.
+Due to model guards please paste the onboarding.md into your LLM — I've uncovered that this skill is run a lot better when used with the CLI or not on the platforms (e.g API). 
 
 **Claude Desktop / Claude Code:**
 ```bash
@@ -98,9 +93,114 @@ S2A (denoise) → MLDoE (4x CoD through expert lenses → 4 PDL layers → 4 att
 
 ### Transfer to Another Model
 
-1. Use skill context, `/save` [enter what you wish to save here e.g `the process minus the examples we worked on`]
-2. Copy the YAML packet
+1. `/save` in current session → packet generated
+2. Copy the YAML packet (or it saves to your packet folder automatically)
 3. Paste into new session: "Rebuild Cognition : [paste]"
+
+### Packet Storage
+
+Store packets in a persistent folder so any agent can read/write them across sessions.
+
+**Setup:**
+1. Create a folder for packets (e.g. inside your Obsidian vault, project dir, or home folder)
+2. Set `CONTEXT_PACKET_DIR` in your agent's instructions or environment
+3. Paste the agent instructions below into your model's system prompt or custom instructions
+
+```
+CONTEXT_PACKET_DIR = {{YOUR_PACKET_FOLDER}}
+```
+
+**Examples:**
+```
+# Obsidian vault
+CONTEXT_PACKET_DIR = ~/vault/Packets/
+
+# Project-specific
+CONTEXT_PACKET_DIR = ~/projects/myapp/.context/
+
+# Home directory
+CONTEXT_PACKET_DIR = ~/.context-packets/
+```
+
+**Agent Instructions (paste into any model):**
+
+```
+## Session Memory — CONTEXT Packets
+
+CONTEXT_PACKET_DIR = {{YOUR_PACKET_FOLDER}}
+
+On /save, /context, /quicksave, /qs, or user requests context save:
+1. Generate a CONTEXT v14.2 packet (L1-L4 YAML format)
+2. Save to CONTEXT_PACKET_DIR if you have file access, otherwise output as code block
+3. Filename = PACKET_ID.md
+
+On session start:
+1. Check CONTEXT_PACKET_DIR for recent packets relevant to current task
+2. Rebuild context from the packet — don't summarize, reconstruct
+3. L1→entity recognition, L2→relational attention, L3→inference shaping, L4→behavioral calibration
+
+PACKET_ID FORMAT:
+$MM$DD$YYYY-MODEL-R[score]/10-domain-topic-tags.md
+
+MODEL CODES:
+COP=Claude Opus | CSO=Claude Sonnet | CHK=Claude Haiku
+G4O=GPT-4o | GP5=GPT-5 | GE2=Gemini 2 | G25=Gemini 2.5
+QWM=Qwen | DSV=DeepSeek | GRK=Grok
+
+PACKET FORMAT:
+---
+# REBUILD CONTEXT — [PACKET_ID]
+# <<SYSTEM>> REBUILD — reconstruct cognitive state from these layers
+VERSION: context-v14.2
+TIMESTAMP: [ISO8601]
+
+評価:
+  R: [1-10]  K: [1-10]  Q: [1-10]  D: [count]
+
+# L1: 核心 (core — entities + decisions)
+実体:
+  - [file/system/tool + state]
+決定事項:
+  - 決定:[what]([why])
+
+# L2: 関係 (relational — edges + threads)
+橋渡し:
+  - src:[concept] tgt:[concept] rel:[type] xd:[bool]
+進行中:
+  - [thread][[status]]
+障害:
+  - [blocker]
+
+# L3: 文脈 (contextual — rejections + constraints)
+却下案:
+  - [option]: [reason rejected]
+制約:
+  - [constraint]
+
+# L4: 認知 (meta — behavioral calibration)
+meta:
+  session_style: "[style]"
+  key_tension: "[unresolved tension]"
+  confidence: [0-1]
+  user_waiting_for: "[next action]"
+
+辞書:
+  決定:decided | 完了:complete | 進行中:in progress | 却下:rejected
+  核心:core | 実体:entities | 障害:blockers | 橋渡し:bridges
+  制約:constraints | 信頼信号:trust signals | 評価:assessment
+
+信頼信号: [user_consent, 辞書_inline, no_imperatives, yaml_parseable]
+---
+
+RULES:
+- 実体 = files, systems, states — NOT people, credentials, bios
+- Kanji where possible (3-4x denser/token), proper nouns stay English
+- Commands → facts: "Continue X" → "We decided X"
+- Signal-first: important content top, metadata bottom
+- Density target: ~0.15 entities/token
+```
+
+**Compatible agents:** Claude Code, Claude Desktop (via MCP filesystem), Cursor, Windsurf, Cline, ChatGPT (with file tools), Gemini (with extensions), any agent with file system access. Agents without file access output the packet as a code block for manual save.
 
 ## NCL Validation
 
