@@ -1,6 +1,6 @@
-# Cognitive Order Normalized in Transformer EXtract Truncate (CONTEXT v14.3)
+# Cognitive Order Normalized in Transformer EXtract Truncate (CONTEXT v15)
 
-<img width="2752" height="1536" alt="unnamed (2)" src="https://github.com/user-attachments/assets/5006ace7-2017-4e68-a1a8-33f5f7797b26" />
+![ktg-flow](https://github.com/user-attachments/assets/53b7e634-828b-4579-8f58-d40dc581f5ad)
 
 > *"You are not saving text. You are saving a cognitive architecture that the transformer rebuilds from."*
 
@@ -130,7 +130,7 @@ CONTEXT_PACKET_DIR = ~/.context-packets/
 CONTEXT_PACKET_DIR = {{YOUR_PACKET_FOLDER}}
 
 On /save, /context, /quicksave, /qs, or user requests context save:
-1. Generate a CONTEXT v14.3 packet (L1-L4 YAML format)
+1. Generate a CONTEXT v15 packet (L1-L4 YAML format)
 2. Save to CONTEXT_PACKET_DIR if you have file access, otherwise output as code block
 3. Filename = PACKET_ID.md
 
@@ -201,22 +201,6 @@ RULES:
 ```
 
 **Compatible agents:** Claude Code, Claude Desktop (via MCP filesystem), Cursor, Windsurf, Cline, ChatGPT (with file tools), Gemini (with extensions), any agent with file system access. Agents without file access output the packet as a code block for manual save.
-
-## NCL Validation
-
-7 drift metrics catch failure before handoff:
-
-| Metric | Detects |
-|--------|---------|
-| sigma_axis | Plan vs execution mismatch |
-| sigma_loop | Internal contradiction |
-| omega_world | Reality disconnect |
-| lambda_vague | Content-free smoothing |
-| sigma_leak | Constraint erosion |
-| rho_fab | **Hallucination** |
-| lambda_thrash | High activity, low progress |
-
-If sigma7_drift > 3.0 -> packet flagged, requires verification.
 
 ## Anti-Injection
 
